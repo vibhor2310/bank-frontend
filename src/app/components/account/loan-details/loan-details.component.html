@@ -1,0 +1,30 @@
+<div class="container mt-5">
+    <div class="card">
+      <div class="card-header">
+        Loan Details
+      </div>
+      <div class="card-body">
+        <div *ngIf="errorMsg" class="alert alert-danger">
+          {{ errorMsg }}
+        </div>
+        <table class="table table-bordered table-hover">
+          <thead class="thead-light">
+            <tr>
+              <th>Date</th>
+              <th>Loan Type</th>
+              <th>Amount</th>
+              <th>status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let loan of loans">
+              <td>{{ loan.dateCreated}}</td>
+              <td>{{ loan.loanType }}</td>
+              <td>{{ loan.amount }}</td>
+              <td>{{ loan.status}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
